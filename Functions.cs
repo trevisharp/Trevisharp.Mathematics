@@ -14,7 +14,13 @@ public static class Functions
     }
 
     public static Function linear(double a, double b)
+        => a * x + b;
+    
+    public static Function sin(Function f)
     {
-        return a * x + b;
+        AggregativeFunction result = new AggregativeFunction();
+        result.Aggregation = new SinAggregation();
+        result.Inner = f;
+        return result;
     }
 }
