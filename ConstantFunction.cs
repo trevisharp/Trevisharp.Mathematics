@@ -1,10 +1,10 @@
-using System;
-
 namespace Trevisharp.Mathematics;
+
+using static Functions;
 
 public record ConstantFunction : Function
 {
-    private double constant;
+    internal double constant;
 
     internal ConstantFunction(double constant)
         => this.constant = constant;
@@ -16,10 +16,8 @@ public record ConstantFunction : Function
         => 0;
 
     public override Function Integrate()
-    {
-        throw new NotImplementedException();
-    }
-
+        => x;
+    
     protected override string Show()
         => constant.ToString();
 }

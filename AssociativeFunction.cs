@@ -2,20 +2,20 @@ namespace Trevisharp.Mathematics;
 
 public record AssociativeFunction : Function
 {
-    public override double this[double x] => throw new System.NotImplementedException();
+    private FunctionPool pool = new FunctionPool();
+    public FunctionPool FunctionPool => pool;
+    
+    public IAssociation Association { get; set; }
+
+    public override double this[double x]
+        => Association.Calculate(pool, x);
 
     public override Function Derive()
-    {
-        throw new System.NotImplementedException();
-    }
+        => Association.Derive(pool);
 
     public override Function Integrate()
-    {
-        throw new System.NotImplementedException();
-    }
+        => Association.Integrate(pool);
 
     protected override string Show()
-    {
-        throw new System.NotImplementedException();
-    }
+        => Association.Show(pool);
 }

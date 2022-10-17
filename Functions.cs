@@ -13,25 +13,8 @@ public static class Functions
         }
     }
 
-    private static Variable _y = null;
-    public static Variable y
+    public static Function linear(double a, double b)
     {
-        get
-        {
-            if (_y == null)
-                _y = new Variable("y");
-            return _y;
-        }
-    }
-
-    private static Variable _z = null;
-    public static Variable z
-    {
-        get
-        {
-            if (_z == null)
-                _z = new Variable("z");
-            return _z;
-        }
+        return a * x + b;
     }
 }

@@ -23,4 +23,26 @@ public abstract record Function
 
     public static implicit operator Function(int x)
         => new ConstantFunction(x);
+    
+    public static Function operator +(Function f, Function g)
+    {
+        if (f == null)
+            return g ?? 0;
+        if (g == null)
+            return f;
+        AssociativeFunction af = new AssociativeFunction();
+        af.Association = new MultiplyAssociation();
+        af.FunctionPool.Add(f);
+        af.FunctionPool.Add(g);
+        return af;
+    }
+    
+    public static Function operator *(Function f, Function g)
+    {
+        AssociativeFunction af = new AssociativeFunction();
+        af.Association = new MultiplyAssociation();
+        af.FunctionPool.Add(f);
+        af.FunctionPool.Add(g);
+        return af;
+    }
 }
