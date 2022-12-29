@@ -1,6 +1,6 @@
 using System;
 
-namespace Trevisharp.Mathematics;
+namespace Trevisharp.Mathematics.Calculus;
 
 public record SinAggregation : IAggregation
 {

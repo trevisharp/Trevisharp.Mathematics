@@ -1,7 +1,7 @@
 using System.Text;
 using System.Collections.Generic;
 
-namespace Trevisharp.Mathematics;
+namespace Trevisharp.Mathematics.Calculus;
 
 public class MultiplyAssociation : IAssociation
 {

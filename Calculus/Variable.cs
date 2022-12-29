@@ -1,4 +1,4 @@
-namespace Trevisharp.Mathematics;
+namespace Trevisharp.Mathematics.Calculus;
 
 public record Variable : Function
 {

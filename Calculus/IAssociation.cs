@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Trevisharp.Mathematics;
+namespace Trevisharp.Mathematics.Calculus;
 
 public interface IAssociation
 {

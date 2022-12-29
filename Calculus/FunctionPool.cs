@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Trevisharp.Mathematics;
+namespace Trevisharp.Mathematics.Calculus;
 
 public class FunctionPool : IEnumerable<Function>
 {
